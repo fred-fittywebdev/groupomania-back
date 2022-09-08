@@ -28,6 +28,10 @@ app.use('/users', userRouter)
 app.use('/post', postRouter)
 app.use('/profile', profileRouter)
 
+app.get("/", (req, res) => {
+    res.send("heroku back")
+})
+
 const PORT = process.env.PORT || 8080;
 
 const server = app.listen(PORT, () =>
